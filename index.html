@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friendship Court — The €100 Agreement Generator</title>
+<meta name="description" content="Generate a funny, official-looking friendship misconduct agreement with a €100 joke fine. For entertainment only.">
+<meta name="theme-color" content="#18223B">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#home" data-nav="home">
+      <span class="brand-seal" aria-hidden="true">FC</span>
+      <span><span class="brand-name">Friendship Court</span><span class="brand-sub">The €100 Agreement Generator</span></span>
+    </a>
+    <button class="btn btn-small" type="button" data-action="start">File a complaint</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HOME -->
+  <section id="view-home" class="view" data-screen-label="Home">
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="kicker">Case file № 100 · Court now in session</span>
+          <h1>Your Friend Has Been <em>Officially</em> Put On Notice!</h1>
+          <p class="lede">Left you on seen? Ate your fries? Insulted you without authorization? Now there are consequences. Create an official-looking Friendship Misconduct Agreement and sentence them to a <strong>€100 friendship fine</strong>, payable in pure embarrassment.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" type="button" data-action="start">Generate Their Punishment Agreement</button>
+          </div>
+          <div class="hero-notes">
+            <span class="disclaimer-chip"><span class="warn" aria-hidden="true"></span>For entertainment only. Not a legally binding contract.</span>
+            <span class="tiny">Free · No sign-up · Photos never leave your device</span>
+          </div>
+        </div>
+        <figure class="preview">
+          <span class="preview-tag">Sample agreement</span>
+          <div class="preview-paper">
+            <img id="sample-img" alt="Sample Friendship Misconduct Agreement" width="1000" height="1414">
+          </div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Today's docket</span>
+          <h2>Frequently reported crimes against friendship</h2>
+          <p>Each offense carries the standard €100 joke fine. Repeat offenders may also be required to buy dinner.</p>
+        </div>
+        <div class="cases">
+          <article class="case">
+            <div class="case-top"><span>Case No. 001</span><span>Digital misconduct</span></div>
+            <h3>Leaving messages on seen</h3>
+            <p>Read at 14:02. No reply by 21:47. Posted a story at 15:30. The evidence speaks for itself.</p>
+            <div class="case-foot"><span class="fine">Fine: €100</span><span class="mini-stamp">Guilty</span></div>
+          </article>
+          <article class="case">
+            <div class="case-top"><span>Case No. 002</span><span>Verbal misconduct</span></div>
+            <h3>Insulting me without authorization</h3>
+            <p>Unlicensed roasting in front of witnesses. Roasts require a signed permit and 24 hours' notice.</p>
+            <div class="case-foot"><span class="fine">Fine: €100</span><span class="mini-stamp">Guilty</span></div>
+          </article>
+          <article class="case">
+            <div class="case-top"><span>Case No. 003</span><span>Snack-related misconduct</span></div>
+            <h3>Stealing my food or refusing to share snacks</h3>
+            <p>Said "I'm not hungry," then ate half of my fries. Refused to share crisps during a film. Twice.</p>
+            <div class="case-foot"><span class="fine">Fine: €100</span><span class="mini-stamp">Guilty</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice-band">
+      <div class="wrap">
+        <span class="warn warn-lg" aria-hidden="true"></span>
+        <div>
+          <h2>For entertainment only. Not a legally binding contract.</h2>
+          <p>Friendship Court is a joke. The €100 fine is imaginary, nobody owes anybody real money and no payment is ever collected. Photos are processed on your device and are never uploaded or stored.</p>
+        </div>
+        <button class="btn btn-gold" type="button" data-action="start">File a complaint</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERATOR -->
+  <section id="view-create" class="view" data-screen-label="Generator" hidden>
+    <div class="form-shell">
+      <form id="complaint-form" class="form-paper" novalidate>
+        <div class="form-head">
+          <span>Form FC-7 · Formal Complaint</span>
+          <span>Step <span id="step-num">1</span> of 7</span>
+        </div>
+        <div class="progress" id="progress" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+        <fieldset class="step" data-step="1">
+          <legend class="step-label">Step 1 · The Complainant</legend>
+          <h2 tabindex="-1">What's your name?</h2>
+          <p class="hint">That's you, the wronged party. This is how you'll appear on the agreement.</p>
+          <label class="sr" for="complainant">Your name</label>
+          <input class="line-input" id="complainant" type="text" maxlength="40" autocomplete="given-name" placeholder="e.g. Alex" spellcheck="false">
+        </fieldset>
+
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="step-label">Step 2 · The Accused</legend>
+          <h2 tabindex="-1">Who is the accused?</h2>
+          <p class="hint">Your friend's name or nickname. It will be printed in very large letters.</p>
+          <label class="sr" for="accused">Friend's name</label>
+          <input class="line-input" id="accused" type="text" maxlength="40" autocomplete="off" placeholder="e.g. Jamie" spellcheck="false">
+        </fieldset>
+
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="step-label">Step 3 · The Evidence</legend>
+          <h2 tabindex="-1">Upload the accused's photo</h2>
+          <p class="hint">A mugshot for the official portrait. JPG, JPEG, PNG or WebP, up to 10 MB.</p>
+          <input id="photo-input" class="sr" type="file" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp">
+          <label id="dropzone" class="dropzone" for="photo-input">
+            <span class="dz-icon" aria-hidden="true"></span>
+            <span class="dz-title" id="dz-title">Tap to choose a photo</span>
+            <span class="dz-sub">or drag and drop it here</span>
+          </label>
+          <div id="photo-preview" class="photo-preview" hidden>
+            <div class="mugshot"><img id="photo-thumb" alt="Preview of the accused's photo"></div>
+            <div class="photo-actions">
+              <strong class="photo-ok">Evidence accepted.</strong>
+              <button class="btn btn-small" type="button" id="photo-replace">Replace photo</button>
+              <button class="btn btn-small btn-ghost" type="button" id="photo-remove">Remove photo</button>
+            </div>
+          </div>
+          <p class="privacy-note">Your photo stays on this device. It is resized in your browser and is never uploaded to a server.</p>
+          <button class="btn-link" type="button" id="no-photo">Continue without a photo</button>
+        </fieldset>
+
+        <fieldset class="step" data-step="4" hidden>
+          <legend class="step-label">Step 4 · The Offenses</legend>
+          <h2 tabindex="-1">What did they do?</h2>
+          <p class="hint">Select every offense that applies. The Court has seen it all.</p>
+          <div class="options" id="violation-options"></div>
+        </fieldset>
+
+        <fieldset class="step" data-step="5" hidden>
+          <legend class="step-label">Step 5 · Additional Charges</legend>
+          <h2 tabindex="-1">Anything else to report?</h2>
+          <p class="hint">Optional. Describe any additional misconduct in your own words.</p>
+          <label class="sr" for="custom">Custom violation</label>
+          <textarea id="custom" maxlength="120" rows="3" placeholder="e.g. Spoiled the ending of a series I was clearly still watching."></textarea>
+          <div class="counter"><span id="custom-count">0</span> / 120</div>
+        </fieldset>
+
+        <fieldset class="step" data-step="6" hidden>
+          <legend class="step-label">Step 6 · Sentencing</legend>
+          <h2 tabindex="-1">Choose the punishment</h2>
+          <p class="hint">The €100 joke fine always applies. Pick one additional consequence.</p>
+          <div class="options" id="punishment-options"></div>
+        </fieldset>
+
+        <fieldset class="step" data-step="7" hidden>
+          <legend class="step-label">Step 7 · Final Review</legend>
+          <h2 tabindex="-1">Review the evidence</h2>
+          <p class="hint">Check everything before the Court rules. You can edit any item.</p>
+          <dl class="review" id="review"></dl>
+        </fieldset>
+
+        <p class="error" id="form-error" role="alert" aria-live="assertive"></p>
+
+        <div class="form-nav">
+          <button class="btn" type="button" id="btn-back">Back</button>
+          <button class="btn btn-primary" type="submit" id="btn-next">Next</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="view-result" class="view" data-screen-label="Result" hidden>
+    <div class="result">
+      <div class="wrap">
+        <div class="result-head">
+          <span class="eyebrow">Verdict delivered</span>
+          <h2>The Court has ruled.</h2>
+          <p>Agreement No. <span id="result-number" class="mono">—</span>. Download it, print it, or deliver it with maximum drama.</p>
+        </div>
+        <div class="result-grid">
+          <div class="doc-frame">
+            <div id="doc-status" class="doc-status">
+              <span class="deliberating" aria-hidden="true"></span>
+              <span id="doc-status-text">The Court is deliberating…</span>
+            </div>
+            <img id="doc-img" alt="Your generated Friendship Misconduct Agreement" hidden>
+          </div>
+          <aside class="actions-panel" aria-label="Agreement actions">
+            <h3>Deliver the verdict</h3>
+            <button class="btn btn-primary" type="button" id="act-pdf">Download as PDF</button>
+            <button class="btn" type="button" id="act-print">Print agreement</button>
+            <button class="btn-link" type="button" id="act-png">Download as image (PNG)</button>
+            <div class="msg">
+              <h4>Funny message for the accused</h4>
+              <p id="message" class="message-box"></p>
+              <div class="msg-actions">
+                <button class="btn btn-small" type="button" id="act-copy">Copy message</button>
+                <button class="btn btn-small" type="button" id="act-share" hidden>Share</button>
+              </div>
+            </div>
+            <div class="panel-row">
+              <button class="btn btn-small" type="button" id="act-edit">Edit agreement</button>
+              <button class="btn btn-small btn-ghost" type="button" id="act-reset">Start over</button>
+            </div>
+            <p class="tiny">For entertainment only. Not a legally binding contract. No real money is owed.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Friendship Court — The €100 Agreement Generator</span>
+    <span>For entertainment only. Not legal advice. Not a legally binding contract.</span>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<img id="print-sheet" alt="">
+<noscript><div class="noscript">Friendship Court needs JavaScript to generate agreements. Please enable it in your browser.</div></noscript>
+
+<script src="assets/js/certificate.js"></script>
+<script src="assets/js/pdf.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
